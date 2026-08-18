@@ -1,0 +1,162 @@
+:root {
+    --ink: #0A2540;
+    /* fondo profundo, texto principal */
+    --deep: #114B5F;
+    /* azul petróleo, secciones */
+    --aqua: #2EC4B6;
+    /* turquesa, acento principal */
+    --ice: #DFF3F7;
+    /* superficie clara */
+    --mist: #F6FBFC;
+    /* fondo de página */
+    --glint: #FFC857;
+    /* reflejo de sol en el agua, acento cálido puntual */
+    --ink-soft: #4A6072;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--mist);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.display-font {
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: -0.01em;
+}
+
+.eyebrow {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--aqua);
+}
+
+a {
+    color: var(--deep);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    position: relative;
+    background:
+        radial-gradient(1200px 500px at 15% -10%, rgba(46, 196, 182, 0.35), transparent 60%),
+        linear-gradient(180deg, #0A2540 0%, #0E3A52 65%, #114B5F 100%);
+    color: #EAF6F8;
+    padding: 1.5rem .5rem 1rem;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: #fff;
+    max-width: 14ch;
+}
+
+/* ---------- SECTION SHELL ---------- */
+section.band {
+    padding: 4.5rem 0;
+}
+
+/* ---------- CICLO (banda destacada) ---------- */
+.ciclo-band {
+    background: var(--ink);
+    color: #E4F3F5;
+    border-radius: 28px;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: center;
+    height: 100%;
+}
+
+.ciclo-band img {
+    border-radius: 20px 20px 20px 2px;
+    width: 100%;
+    max-width: 340px;
+    object-fit: cover;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.ciclo-band .txt {
+    flex: 1 1 320px;
+}
+
+.ciclo-band h2 {
+    color: #fff;
+}
+
+.ciclo-band .btn-glint {
+    background: var(--glint);
+    color: #3A2900;
+    border: none;
+    font-weight: 600;
+}
+
+.ciclo-band .btn-glint:hover {
+    background: #ffd77e;
+    color: #3A2900;
+}
+
+/* ---------- VIDA (grid mixta) ---------- */
+.life-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 6px 18px rgba(10, 37, 64, 0.05);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.life-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(10, 37, 64, 0.1);
+}
+
+.life-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.life-card .body {
+    padding: 1.3rem 1.4rem 1.5rem;
+}
+
+.life-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.life-card p {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+}
+
+.life-card a {
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--deep);
+    text-decoration: none;
+}
+
+footer.site {
+    background: var(--ink);
+    color: #9FC3CC;
+    padding: 2.2rem 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
